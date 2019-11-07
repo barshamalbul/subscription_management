@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         // echo $dt->toDateString();
         DB::table('users')->insert([
             'name' => 'user',
-            'email' => 'user.@gmail.com',
+            'email' => 'user@gmail.com',
             'password' =>bcrypt('user@123'),
             'created_at' =>Carbon::now()->toDateString(),
             'updated_at' =>Carbon::now(),

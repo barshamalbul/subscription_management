@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
+Use App\plans;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $plans=plans::get();
+        // return view('home',compact('plans'));
         return view('home');
     }
+   
 }
