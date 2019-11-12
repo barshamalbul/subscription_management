@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -21,6 +21,7 @@
                                 <h5>plan name: {{ $subscriptions->name }}</h5>
                                 <h5>Stripe_status: {{ $subscriptions->stripe_status }}</h5>
                                  <h5>Quantity: {{ $subscriptions->quantity}}</h5>
+                                 <a href="{{ route('subscription.show',$subscriptions->stripe_id) }}" class="btn btn-outline-dark pull-right">change subscription</a>
                                  <a href="{{ route('subscription.increase',$subscriptions->stripe_id) }}" class="btn btn-outline-dark pull-right">Increase Subscription</a>
                                  <a href="{{ route('subscription.decrease',$subscriptions->stripe_id) }}" class="btn btn-outline-dark pull-right">Decrease Subscription</a>
                                 <a href="{{ route('subscription.cancel',$subscriptions->stripe_id) }}" class="btn btn-outline-dark pull-right">Cancel Subscription</a>
